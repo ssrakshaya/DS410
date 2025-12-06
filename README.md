@@ -19,5 +19,6 @@ In order to reproduce our cluster mode results:
 3. Go to "standalone.sh" in this Github and download the standalone.sh
 4. Go the ICDS Roar Portal, create a Jupyter Lab session, and upload the Amazon_reviews.csv, Final_Project_Cluster.py, and standalone.sh to the work directory
 5. Follow the instructions give by the professor in order to run the Final_Project_Cluster.py in cluster mode
+
 NOTE - As the entire Final_Project_Cluster.py file takes a long time to run in totality, we recommend commenting out parts of the file and running them in batches.
 
