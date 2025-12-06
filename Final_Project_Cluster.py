@@ -106,7 +106,6 @@ reviews = reviews1.na.drop()
 
 # In[19]:
 
-'''
 reviews_label = reviews.withColumn("Labeled_Sentiment", when(reviews["Sentiment"] == 2, "Positive").when(reviews["Sentiment"] == 1, "Negative"))
 sentiment_counts = reviews_label.groupBy("Labeled_Sentiment").count()
 pandas_sentiment=sentiment_counts.toPandas()
@@ -335,7 +334,6 @@ test_data.unpersist()
 # Data PreProcessing for Model Building
 
 # In[27]:
-'''
 
 #read in datasets from saved folder
 train_df = ss.read.parquet("preprocessed_data_cluster_amazon/train_transformer_ready")
@@ -450,7 +448,6 @@ def evaluate_model(model, model_name):
 # # SVM
 
 # In[32]:
-'''
 
 #define Linear SVC model
 svm = LinearSVC(featuresCol="features", labelCol="label", maxIter=100, regParam=0.1)
@@ -500,21 +497,6 @@ nb = NaiveBayes(
 #call evaluate_model function
 evaluate_model(nb, "Naive_Bayes")
 
-
-# # XG Boost
-
-# In[ ]:
-
-
-gbt = GBTClassifier(
-    featuresCol="features",
-    labelCol="label",
-    maxIter=50,
-    maxDepth=5
-)
-
-evaluate_model(gbt, "GBT")
-'''
 
 # # Hyperparameter Tuning on Linear SVC
 
