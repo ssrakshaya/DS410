@@ -263,7 +263,7 @@ reviews_stemmed = reviews_no_stop_words.withColumn(
     stem_udf(col("Text_No_Stop"))
 )
 
-# Preparing Data for Hugging Face
+# Preparing Data for Train/Validation/Test Split
 
 # In[24]:
 
